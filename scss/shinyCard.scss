@@ -1,195 +1,7 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
-#bodyIndex {
-  background-color: #b5caeb;
-}
-#bodyIndex header {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-}
-#bodyIndex header input {
-  width: 60vw;
-  align-items: center;
-}
-#bodyIndex header .fa-solid {
-  font-size: 22px;
-}
-#bodyIndex main .text-white {
-  transition: 0.25s;
-}
-#bodyIndex main .text-white:hover {
-  transform: scale(105%);
-  cursor: pointer;
-}
-#bodyIndex main #buttonCreate {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  transition: 0.25s;
-}
-#bodyIndex main #buttonCreate:hover {
-  transform: scale(105%);
-  cursor: pointer;
-}
-#bodyIndex main #characterList {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin: 20px;
-}
-#bodyIndex main #characterList .card {
-  background-color: white;
-  width: 250px;
-  height: 400px;
-  border-radius: 2%;
-  text-align: center;
-  border: 3px solid #F7FCCC;
-  transition: 0.25s;
-}
-#bodyIndex main #characterList .card:hover {
-  transform: scale(105%);
-  cursor: pointer;
-}
-#bodyIndex main #characterList .descriptionBlock {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-}
-#bodyIndex main #characterList .nameBlock {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 500;
-  padding: 5%;
-}
-#bodyIndex main #characterList .buttonModifying {
-  margin-top: 50px;
-}
-#bodyIndex main #characterList .shortDescriptionBloc {
-  margin-bottom: 20px;
-}
-#bodyIndex main #characterList .fa-regular {
-  font-size: 22px;
-  padding: 5%;
-}
-
-#bodyCreate {
-  background-color: #b5caeb;
-}
-#bodyCreate header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#bodyCreate header h1 {
-  margin-top: 100px;
-  margin-bottom: -120px;
-  font-size: 55px;
-  font-weight: bold;
-  color: #374151;
-}
-#bodyCreate #mainCreate {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-#bodyCreate #mainCreate #formulaireCreate {
-  height: 100vh;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#bodyCreate #mainCreate #formulaireCreate .labelinput {
-  display: none;
-}
-#bodyCreate #mainCreate #formulaireCreate #name {
-  margin-bottom: 25px; /* espacement */
-}
-#bodyCreate #mainCreate #formulaireCreate #uploadImage {
-  margin-top: 45px; /* espacement */
-  margin-bottom: 45px; /* espacement */
-  height: 100px;
-}
-#bodyCreate #mainCreate #formulaireCreate #uploadImage #uploadImageLabel {
-  height: 150px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-#bodyCreate #mainCreate #formulaireCreate #uploadImage #dropzone-file {
-  height: 100px;
-}
-#bodyCreate #mainCreate #formulaireCreate #createButton {
-  margin-top: 35px;
-}
-#bodyCreate #mainCreate #formulaireCreate #createButton:hover {
-  cursor: pointer;
-}
-
-#bodyModify {
-  background-color: #b5caeb;
-}
-#bodyModify header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#bodyModify header h1 {
-  margin-top: 100px;
-  margin-bottom: -120px;
-  font-size: 55px;
-  font-weight: bold;
-  color: #374151;
-}
-#bodyModify #mainModify {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-#bodyModify #mainModify #formulaireModify {
-  height: 100vh;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#bodyModify #mainModify #formulaireModify .labelinput {
-  display: none;
-}
-#bodyModify #mainModify #formulaireModify #name {
-  margin-bottom: 25px; /* espacement */
-}
-#bodyModify #mainModify #formulaireModify #uploadImage {
-  margin-top: 45px; /* espacement */
-  margin-bottom: 45px; /* espacement */
-  height: 100px;
-}
-#bodyModify #mainModify #formulaireModify #uploadImage #uploadImageLabel {
-  height: 150px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-#bodyModify #mainModify #formulaireModify #uploadImage #dropzone-file {
-  height: 100px;
-}
-#bodyModify #mainModify #formulaireModify #modifyButton {
-  margin-top: 35px;
-}
-#bodyModify #mainModify #formulaireModify #modifyButton:hover {
-  cursor: pointer;
-}
-
 :root {
   --stepPhp: 5%;
   --patternPhp: url(../img/RareEffect/rareEffectOnePiece.png) center / 75%;
+
   --rainbowPhp: repeating-linear-gradient(
                   0deg,
                   rgb(255, 119, 115) calc(var(--stepPhp) * 1),
@@ -215,8 +27,12 @@
                   rgba(255, 255, 255, 0.15) 20%,
                   rgba(255, 255, 255, 0.25) 120%
   ) var(--bgPhp-x) var(--bgPhp-y) / 300%;
+
+
+
   --stepShib: 5%;
   --patternShib: url(../img/RareEffect/rareEffect2.jpg) center / 75%;
+
   --rainbowShib: repeating-linear-gradient(
                   0deg,
                   rgb(255, 119, 115) calc(var(--stepShib) * 1),
@@ -242,7 +58,11 @@
                   rgba(255, 255, 255, 0.15) 20%,
                   rgba(255, 255, 255, 0.25) 120%
   ) var(--bgShib-x) var(--bgShib-y) / 300%;
+
+
+
 }
+
 
 .cardPhp {
   width: 280px;
@@ -250,24 +70,20 @@
   box-sizing: border-box;
   position: relative;
 }
-
 .cardPhp__wrapper {
   perspective: 600px;
   position: absolute;
   inset: 0;
 }
-
 .cardPhp__3d {
   transform: rotateY(var(--rPhp-x)) rotateX(var(--rPhp-y));
   position: absolute;
   inset: 0;
   clip-path: inset(0 0 0 0 round 48px);
 }
-
 .cardPhp__image {
   clip-path: inset(0 0 0 0 round 48px);
 }
-
 .cardPhp__image img {
   display: block;
   max-width: 100%;
@@ -281,22 +97,28 @@
   z-index: 20;
   mix-blend-mode: soft-light;
   clip-path: inset(0 0 1px 0 round 48px);
-  background: radial-gradient(farthest-corner circle at var(--xPhp) var(--yPhp), rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.65) 20%, rgba(255, 255, 255, 0) 90%);
-}
 
+  background: radial-gradient(
+                  farthest-corner circle at var(--xPhp) var(--yPhp),
+                  rgba(255, 255, 255, 0.8) 10%,
+                  rgba(255, 255, 255, 0.65) 20%,
+                  rgba(255, 255, 255, 0) 90%
+  );
+}
 /* first crazy blend  */
 .cardPhp__layer2 {
   position: absolute;
   inset: 0;
   z-index: 30;
+
   mix-blend-mode: color-dodge;
   will-change: background;
   transition-property: opacity;
   clip-path: inset(0 0 1px 0 round 48px);
+
   background-blend-mode: hue, hue, soft-light, overlay;
   background: var(--patternPhp), var(--rainbowPhp), var(--diagonalPhp);
 }
-
 /* second crazy blend  */
 .cardPhp__layer2:after {
   content: "";
@@ -305,35 +127,35 @@
   background: var(--patternPhp), var(--rainbowPhp), var(--diagonalPhp), var(--shadePhp);
   mix-blend-mode: exclusion;
   background-size: 75%, 200% 400%, 800%, 200%;
-  background-position: center, 0% var(--bgPhp-y), calc(var(--bgPhp-x) * -1) calc(var(--bgPhp-y) * -1), var(--bgPhp-x) var(--bgPhp-y);
+  background-position: center, 0% var(--bgPhp-y),
+  calc(var(--bgPhp-x) * -1) calc(var(--bgPhp-y) * -1), var(--bgPhp-x) var(--bgPhp-y);
   background-blend-mode: soft-light, hue, hard-light;
 }
 
+
+
 /************* Shib ************************************/
+
 .cardShib {
   width: 280px;
   height: 280px;
   box-sizing: border-box;
   position: relative;
 }
-
 .cardShib__wrapper {
   perspective: 600px;
   position: absolute;
   inset: 0;
 }
-
 .cardShib__3d {
   transform: rotateY(var(--rShib-x)) rotateX(var(--rShib-y));
   position: absolute;
   inset: 0;
   clip-path: inset(0 0 0 0 round 48px);
 }
-
 .cardShib__image {
   clip-path: inset(0 0 0 0 round 48px);
 }
-
 .cardShib__image img {
   display: block;
   max-width: 100%;
@@ -347,22 +169,28 @@
   z-index: 20;
   mix-blend-mode: soft-light;
   clip-path: inset(0 0 1px 0 round 48px);
-  background: radial-gradient(farthest-corner circle at var(--xShib) var(--yShib), rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.65) 20%, rgba(255, 255, 255, 0) 90%);
-}
 
+  background: radial-gradient(
+                  farthest-corner circle at var(--xShib) var(--yShib),
+                  rgba(255, 255, 255, 0.8) 10%,
+                  rgba(255, 255, 255, 0.65) 20%,
+                  rgba(255, 255, 255, 0) 90%
+  );
+}
 /* first crazy blend  */
 .cardShib__layer2 {
   position: absolute;
   inset: 0;
   z-index: 30;
+
   mix-blend-mode: color-dodge;
   will-change: background;
   transition-property: opacity;
   clip-path: inset(0 0 1px 0 round 48px);
+
   background-blend-mode: hue, hue, soft-light, overlay;
   background: var(--patternShib), var(--rainbowShib), var(--diagonalShib);
 }
-
 /* second crazy blend  */
 .cardShib__layer2:after {
   content: "";
@@ -371,8 +199,9 @@
   background: var(--patternShib), var(--rainbowShib), var(--diagonalShib), var(--shadeShib);
   mix-blend-mode: exclusion;
   background-size: 75%, 200% 400%, 800%, 200%;
-  background-position: center, 0% var(--bgShib-y), calc(var(--bgShib-x) * -1) calc(var(--bgShib-y) * -1), var(--bgShib-x) var(--bgShib-y);
+  background-position: center, 0% var(--bgShib-y),
+  calc(var(--bgShib-x) * -1) calc(var(--bgShib-y) * -1), var(--bgShib-x) var(--bgShib-y);
   background-blend-mode: soft-light, hue, hard-light;
 }
 
-/*# sourceMappingURL=style.css.map */
+

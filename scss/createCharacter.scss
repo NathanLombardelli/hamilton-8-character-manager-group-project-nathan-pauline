@@ -1,0 +1,70 @@
+
+
+
+
+#bodyCreate {
+  background-color: #b5caeb;
+
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+      margin-top: 100px;
+      margin-bottom: -120px;
+      font-size: 55px;
+      font-weight: bold;
+      color: #374151;
+    }
+  }
+
+
+  #mainCreate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+    #formulaireCreate {
+      height: 100vh;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .labelinput {
+        display: none;
+      }
+
+      #name {
+        margin-bottom: 25px; /* espacement */
+      }
+
+      #uploadImage {
+        margin-top: 45px; /* espacement */
+        margin-bottom: 45px; /* espacement */
+        height: 100px;
+
+        #uploadImageLabel {
+          height: 150px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        #dropzone-file {
+          height: 100px;
+        }
+      }
+
+      #createButton{
+        margin-top: 35px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+
+    }
+  }
+}

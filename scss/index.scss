@@ -1,0 +1,108 @@
+#bodyIndex {
+    background-color:#b5caeb ;
+
+    header {
+
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        
+        input {
+            width: 60vw;
+            align-items: center;
+            
+
+        }
+        .fa-solid {
+            font-size: 22px;
+        }
+    }
+    
+    
+    
+    main {
+        
+   .text-white {
+    transition: 0.25s;
+    &:hover {
+        transform: scale(105%);
+        cursor: pointer;
+    }
+
+  }
+
+    #buttonCreate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        transition: 0.25s;
+        &:hover {
+            transform: scale(105%);
+            cursor: pointer;
+        }
+    }
+ 
+    #characterList {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        margin: 20px;
+       
+    
+        .card {
+            background-color: white;
+            width: 250px;
+            height: 400px;
+            border-radius: 2%;
+            text-align: center;
+            border: 3px solid #F7FCCC;
+            // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            transition: 0.25s; //tps pour les animations
+            &:hover {
+                transform: scale(105%);
+                cursor: pointer;
+            }
+            
+        }
+
+
+        .descriptionBlock {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            
+        }
+            
+        .nameBlock {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 500;
+            padding: 5%;
+
+        }
+
+
+        .buttonModifying {
+            margin-top: 50px;
+        }
+
+        .shortDescriptionBloc {
+            margin-bottom: 20px;
+        }
+
+        .fa-regular {
+            font-size: 22px;
+            padding: 5%;
+        
+        }
+    
+    }
+    
+}
+
+
+}
+
+
+

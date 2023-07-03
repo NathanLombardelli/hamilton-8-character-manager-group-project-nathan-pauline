@@ -4,12 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Document</title>
-  <script type="text/css" src="style.css"></script>
-</head>
-<body>
+    <title>Homepage</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fb31e73e7d.js" crossorigin="anonymous"></script>
+  
+  <body id="bodyIndex">
+
+  <header>
+
+    <div class="search">
+        <form class="flex items-center">
+            <label for="simple-search" class="sr-only">Search</label>
+            <div class="relative w-full">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                </div>
+                <input type="text" id="simple-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
+            </div>
+            <a id="searchButton" class="relative inline-flex items-center justify-center p-3 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </a>
+        </form>
+    </div> 
+
+  </header> 
+
+  <main>
+
+  <a type="button" id="buttonCreate" href="./pages/createCharacter.html" class="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none  dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Create a new character</a>   <!--  toutes les cartes viennent ici -->
+  <section id="characterList">
+
+      <div class="cardPhp">
+          <div class="cardPhp__wrapper">
+              <div class="cardPhp__3d">
+                  <div class="cardPhp__image">
+                      <img src="img/nath.png" alt="" />
+                  </div>
+                  <div class="cardPhp__layer1"></div>
+                  <div class="cardPhp__layer2"></div>
+              </div>
+          </div>
+      </div>
 
 
+      <div class="cardShib">
+          <div class="cardShib__wrapper">
+              <div class="cardShib__3d">
+                  <div class="cardShib__image">
+                      <img src="img/Shiba.png" alt="" />
+                  </div>
+                  <div class="cardShib__layer1"></div>
+                  <div class="cardShib__layer2"></div>
+              </div>
+          </div>
+      </div>
+
+
+  </section>
+
+  </main>
+  <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+      <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">NathPau™</a>. All Rights Reserved.
+    </span>
+          <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+              <li>
+                  <a href="#" class="mr-4 hover:underline md:mr-6 ">Homepage</a>
+              </li>
+              <li>
+                  <a href="./pages/createCharacter.html" class="mr-4 hover:underline md:mr-6">Create a new character</a>
+              </li>
+
+          </ul>
+      </div>
+  </footer>
 <script src="./js/index.js"></script>
 </body>
-</html>
+</html> 

@@ -1,9 +1,16 @@
 *{
   padding: 0;
   margin: 0;
+
 }
+
+//   police de nameBlock : font-family: 'Caprasimo', cursive;
+// police de description block: font-family: 'Montserrat', sans-serif;
+
 
 @import "scss/index.scss";
 @import "scss/character";
 @import "scss/createCharacter";
 @import "scss/modifyCharacter";
+@import "scss/shinyCard";
+
