@@ -11,4 +11,4 @@ Projet réaliser dans le cadre de la formation BeCode sur l'utilisation des API
 
 ## Link
 
-liens ver la [page](url)
+liens ver la [page](https://dazzling-fox-c019d9.netlify.app)
