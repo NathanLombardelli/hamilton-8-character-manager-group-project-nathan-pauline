@@ -1,0 +1,35 @@
+
+
+
+
+html {
+    background-color:#f0f4d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+    
+
+
+    div {
+        
+        border: 3 px solid grey;
+        align-items: center;
+        
+
+    }
+
+    .divButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        transition: 0.25s;
+        &:hover {
+            transform: scale(105%);
+            cursor: pointer;
+        }
+    }
+
+}

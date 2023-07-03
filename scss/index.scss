@@ -6,12 +6,14 @@
         padding: 20px;
         display: flex;
         align-items: center;
+
+        .search {
+            align-content: center;
+            justify-items: center;
+        }
         
         input {
             width: 60vw;
-            align-items: center;
-            
-
         }
         .fa-solid {
             font-size: 22px;
