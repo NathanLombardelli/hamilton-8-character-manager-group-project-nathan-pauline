@@ -1,15 +1,17 @@
 
-
-
-
-html {
-    background-color:#f0f4d3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#allPage {
+    background: rgb(241, 230, 242);
     padding: 0;
     margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
     
+
+    footer {
+        width: 100%;
+
 
 
     div {
@@ -18,18 +20,40 @@ html {
         align-items: center;
         
 
-    }
 
-    .divButton {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 200px;
-        transition: 0.25s;
-        &:hover {
-            transform: scale(105%);
-            cursor: pointer;
-        }
     }
+    .mainDiv {
+        text-align: center;
+        align-items: center;
+        margin:  4% auto ;
+        border:2px solid black;
+        border-radius: 15px;
+        width: 60%;
+        box-shadow: 5px 10px 5px rgb(212, 212, 212);
+        background-color: rgb(247, 246, 248);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .nameBlock {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 20PX;
+            padding: 30px;
+        }
+        .shortDescriptionBlock {
+            font-family:'Titillium Web', sans-serif;
+            padding: 30px;
+            font-size: 18px;
+        }
+        .longDescriptionBlock {
+            font-family:'Titillium Web', sans-serif;
+            
+        }
+
+    }
+    
 
 }
+

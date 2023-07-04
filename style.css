@@ -4,7 +4,6 @@
 }
 
 #bodyIndex {
-
   background-color: #b5caeb;
 }
 #bodyIndex header {
@@ -12,9 +11,12 @@
   display: flex;
   align-items: center;
 }
+#bodyIndex header .search {
+  align-content: center;
+  justify-items: center;
+}
 #bodyIndex header input {
   width: 60vw;
-  align-items: center;
 }
 #bodyIndex header .fa-solid {
   font-size: 22px;
@@ -78,6 +80,48 @@
   padding: 5%;
 }
 
+#allPage {
+  background: rgb(241, 230, 242);
+  padding: 0;
+  margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+}
+#allPage footer {
+  width: 100%;
+}
+#allPage .mainDiv {
+  text-align: center;
+  align-items: center;
+  margin: 4% auto;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 60%;
+  box-shadow: 5px 10px 5px rgb(212, 212, 212);
+  background-color: rgb(247, 246, 248);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#allPage .mainDiv .nameBlock {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20PX;
+  padding: 30px;
+}
+#allPage .mainDiv .shortDescriptionBlock {
+  font-family: "Titillium Web", sans-serif;
+  padding: 30px;
+  font-size: 18px;
+}
+#allPage .mainDiv .longDescriptionBlock {
+  font-family: "Titillium Web", sans-serif;
+
+}
+
 #bodyCreate {
   background-color: #b5caeb;
 }
@@ -134,7 +178,6 @@
 }
 
 #bodyModify {
-
   background-color: #b5caeb;
 }
 #bodyModify header {
@@ -143,6 +186,7 @@
   align-items: center;
 }
 
+
 #bodyIndex header .search {
   align-content: center;
   justify-items: center;
@@ -150,6 +194,7 @@
 #bodyIndex header input {
   width: 60vw;
 }
+
 
 #bodyModify header h1 {
   margin-top: 100px;
@@ -163,7 +208,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-
 }
 #bodyModify #mainModify #formulaireModify {
   height: 100vh;
@@ -256,6 +300,7 @@
   ) var(--bgShib-x) var(--bgShib-y) / 300%;
 }
 
+
 #bodyIndex main #characterList .nameBlock {
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
@@ -267,7 +312,6 @@
   height: 280px;
   box-sizing: border-box;
   position: relative;
-
 }
 
 .cardPhp__wrapper {
@@ -382,6 +426,7 @@
   background: var(--patternShib), var(--rainbowShib), var(--diagonalShib);
 }
 
+
 #bodyIndex main #characterList .fa-regular {
   font-size: 22px;
   padding: 5%;
@@ -476,7 +521,6 @@ html .divButton:hover {
   background-size: 75%, 200% 400%, 800%, 200%;
   background-position: center, 0% var(--bgShib-y), calc(var(--bgShib-x) * -1) calc(var(--bgShib-y) * -1), var(--bgShib-x) var(--bgShib-y);
   background-blend-mode: soft-light, hue, hard-light;
-
 }
 
 /*# sourceMappingURL=style.css.map */
