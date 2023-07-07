@@ -106,6 +106,14 @@
   flex-direction: column;
   justify-content: center;
 }
+#allPage .mainDiv .divButton {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
 #allPage .mainDiv .nameBlock {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -119,7 +127,6 @@
 }
 #allPage .mainDiv .longDescriptionBlock {
   font-family: "Titillium Web", sans-serif;
-
 }
 
 #bodyCreate {
@@ -185,17 +192,6 @@
   justify-content: center;
   align-items: center;
 }
-
-
-#bodyIndex header .search {
-  align-content: center;
-  justify-items: center;
-}
-#bodyIndex header input {
-  width: 60vw;
-}
-
-
 #bodyModify header h1 {
   margin-top: 100px;
   margin-bottom: -120px;
@@ -298,13 +294,6 @@
                   rgba(255, 255, 255, 0.15) 20%,
                   rgba(255, 255, 255, 0.25) 120%
   ) var(--bgShib-x) var(--bgShib-y) / 300%;
-}
-
-
-#bodyIndex main #characterList .nameBlock {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 500;
-  padding: 5%;
 }
 
 .cardPhp {
@@ -424,91 +413,6 @@
   clip-path: inset(0 0 1px 0 round 48px);
   background-blend-mode: hue, hue, soft-light, overlay;
   background: var(--patternShib), var(--rainbowShib), var(--diagonalShib);
-}
-
-
-#bodyIndex main #characterList .fa-regular {
-  font-size: 22px;
-  padding: 5%;
-}
-
-html {
-  background-color: #f0f4d3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0 auto;
-}
-html div {
-  border: 3 px solid grey;
-  align-items: center;
-}
-html .divButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  transition: 0.25s;
-}
-html .divButton:hover {
-  transform: scale(105%);
-  cursor: pointer;
-}
-
-#bodyCreate {
-  background-color: #b5caeb;
-}
-#bodyCreate header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#bodyCreate header h1 {
-  margin-top: 100px;
-  margin-bottom: -120px;
-  font-size: 55px;
-  font-weight: bold;
-  color: #374151;
-}
-#bodyCreate #mainCreate {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-#bodyCreate #mainCreate #formulaireCreate {
-  height: 100vh;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#bodyCreate #mainCreate #formulaireCreate .labelinput {
-  display: none;
-}
-#bodyCreate #mainCreate #formulaireCreate #name {
-  margin-bottom: 25px; /* espacement */
-}
-#bodyCreate #mainCreate #formulaireCreate #uploadImage {
-  margin-top: 45px; /* espacement */
-  margin-bottom: 45px; /* espacement */
-  height: 100px;
-}
-#bodyCreate #mainCreate #formulaireCreate #uploadImage #uploadImageLabel {
-  height: 150px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-#bodyCreate #mainCreate #formulaireCreate #uploadImage #dropzone-file {
-  height: 100px;
-}
-#bodyCreate #mainCreate #formulaireCreate #createButton {
-  margin-top: 35px;
-}
-#bodyCreate #mainCreate #formulaireCreate #createButton:hover {
-  cursor: pointer;
 }
 
 /* second crazy blend  */

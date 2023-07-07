@@ -1,28 +1,38 @@
-const characterId = (new URLSearchParams(window.location.search)).get('id');
-fetch('https://character-database.becode.xyz/characters/' + characterId)
-    .then((response) => response.json())
-    .then(character =>{
+// fetch('https://character-database.becode.xyz/characters/' + (new URLSearchParams(window.location.search)).get('id'))
+//     .then((response) => response.json())
+//     .then(character => displayCharacterDatas(character) );
+
+import * as becodeAPI from './becodeAPI.js';
+import {deleteCharacterId} from "./becodeAPI.js";
+
+becodeAPI.getCharacterId((new URLSearchParams(window.location.search)).get('id')).then(character => displayCharacterDatas(character));
+
+
+
+function displayCharacterDatas(character) {
 
     let div = document.createElement("div");
     div.className = "character";
     document.body.append(div);
-    
+
     let image = new Image();
     image.src = 'data:image/png;base64,'+ character["image"];
     div.appendChild(image);
     image.style.width = "30%";
-    
+
 
     let nameBlock = document.createElement("p"); // amener le nom du character
     nameBlock.innerText = character["name"]; // dire que y aura du texte et que c nom de l'api
     nameBlock.className = "nameBlock";  // mettre une classe nameBlock
     div.appendChild(nameBlock);
 
-    let shortDescriptionBlock = document.createElement("p"); 
-    shortDescriptionBlock.innerText = character["shortDescription"];
-    shortDescriptionBlock.className = "shortDescriptionBlock";
+
+        let shortDescriptionBlock = document.createElement("p");
+        shortDescriptionBlock.innerText = character["shortDescription"];
+        shortDescriptionBlock.className = "shortDescriptionBlock";
 
     let longDescriptionBlock = document.createElement("md-block");
+    longDescriptionBlock.hmin = 2;
     longDescriptionBlock.innerText = character["description"];
     longDescriptionBlock.className = "longDescriptionBlock";
 
@@ -41,21 +51,21 @@ fetch('https://character-database.becode.xyz/characters/' + characterId)
     buttonModifying.style.color = "#2f9d10";
     buttonModifying.style.textDecoration = "none";
     buttonModifying.className = "fa-solid fa-pencil";
-    buttonModifying.href= "./pages/modifyCharacter.html?id=" + character["id"];
+    buttonModifying.href= "../pages/modifyCharacter.html?id=" + character["id"];
     buttonModifying.id = "buttonModifying";
     buttonModifying.style.fontSize = "40px";
     buttonModifying.style.paddingLeft = "10px";
 
 
     let buttonDelete = document.createElement("i");
- 
+
 
     buttonDelete.style.color = "#ed1d1d";
     buttonDelete.className = "fa-regular fa-circle-xmark";
     buttonDelete.style.fontSize = "40px";
     buttonDelete.addEventListener("click", ()=> {
-    deleteTheCharacter(character["id"]);
-    }); 
+        deleteTheCharacter(character["id"]);
+    });
 
 
     divButton.append(buttonDelete, buttonModifying);
@@ -66,10 +76,8 @@ fetch('https://character-database.becode.xyz/characters/' + characterId)
 
     main.append(image, div, divButton);
 
-});
 
-
-
+}
 
 
 async function deleteTheCharacter(id) {
@@ -85,13 +93,15 @@ async function deleteTheCharacter(id) {
     }
 
     if (reponse){
-        fetch('https://character-database.becode.xyz/characters/' + id,init)
-            .then((response) => console.log(response))
-            .then(()=>
-                window.location.replace("./index.html")
-            )
-            .catch(error=> {
-                console.log(error);
-            });
+
+        becodeAPI.deleteCharacterId(id,init).then(()=> window.location.replace("../index.html"));
+        // fetch('https://character-database.becode.xyz/characters/' + id,init)
+        //     .then((response) => console.log(response))
+        //     .then(()=>
+        //         window.location.replace("./index.html")
+        //     )
+        //     .catch(error=> {
+        //         console.log(error);
+        //     });
     }
 }

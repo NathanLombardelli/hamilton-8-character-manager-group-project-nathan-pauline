@@ -1,8 +1,13 @@
 
+import * as becodeAPI from './becodeAPI.js';
+
+
+becodeAPI.getAllCharcater().then((json) =>  afficher(json));
+
 // je recup les infos, c ma requête api
-fetch('https://character-database.becode.xyz/characters')
-    .then((response) => response.json()) // transformer la promesse, qui s'apelle response, en json (le format)
-    .then((json) =>  afficher(json)); // je donne en param le json
+// fetch('https://character-database.becode.xyz/characters')
+//     .then((response) => response.json()) // transformer la promesse, qui s'apelle response, en json (le format)
+//     .then((json) =>  afficher(json)); // je donne en param le json
 
 
 
@@ -13,7 +18,7 @@ function afficher(json) {// nom de la var plus haut, c un argument de la fct
        //  console.log(character ["name"] );
         let div = document.createElement("a"); // 2.3.
         div.className = "card"; // je crée une classe a ma div pour la styliser plus tard dans sass
-        div.href = "./pages/character.html?id=" + character["id"]; // character c'est clé et id c valeur (clé valeur)
+        div.href = "../pages/character.html?id=" + character["id"]; // character c'est clé et id c valeur (clé valeur)
        
         
         let image = new Image();
@@ -36,7 +41,7 @@ function afficher(json) {// nom de la var plus haut, c un argument de la fct
         let buttonModifying = document.createElement("a"); // je crée un button pour modifier mon chara
         buttonModifying.className = "fa-regular fa-pen-to-square";
         buttonModifying.style.color = "#bdd283";
-        buttonModifying.href= "./pages/modifyCharacter.html?id=" + character["id"];
+        buttonModifying.href= "../pages/modifyCharacter.html?id=" + character["id"];
         buttonModifying.id = "buttonModifying";
 
 
@@ -67,14 +72,24 @@ async function deleteTheCharacter(id) {
     }
 
     if (reponse){
-        fetch('https://character-database.becode.xyz/characters/' + id,init)
+
+        becodeAPI.deleteCharacterId(id,init)
             .then((response) => console.log(response))
             .then(()=>
-                window.location.replace("./index.html")
+                window.location.replace("../index.html")
             )
             .catch(error=> {
                 console.log(error);
             });
+
+        // fetch('https://character-database.becode.xyz/characters/' + id,init)
+        //     .then((response) => console.log(response))
+        //     .then(()=>
+        //         window.location.replace("./index.html")
+        //     )
+        //     .catch(error=> {
+        //         console.log(error);
+        //     });
     }
 }
 
@@ -102,41 +117,42 @@ async function deleteTheCharacter(id) {
 /************************ Shiny card ***************************/
 
 
+    const elPhp = document.querySelector(".cardPhp");
 
-const elPhp = document.querySelector(".cardPhp");
-const wrapPhp = document.querySelector(".cardPhp__wrapper");
-let wPhp = elPhp.clientWidth;
-let hPhp = elPhp.clientHeight;
-let bPhp = elPhp.getBoundingClientRect();
-elPhp.addEventListener("mousemove", (e) => {
-    let X = (e.clientX - bPhp.width) / wPhp;
-    let Y = (e.clientY - bPhp.height) / hPhp;
+    elPhp.addEventListener("mousemove", (e) => {
+        let wPhp = elPhp.clientWidth;
+        let hPhp = elPhp.clientHeight;
+        let bPhp = elPhp.getBoundingClientRect();
 
-    let rX = -(X - 0.5) * 26;
-    let rY = (Y - 0.5) * 26;
+        let X = (e.clientX - bPhp.width) / wPhp;
+        let Y = (e.clientY - bPhp.height) / hPhp;
 
-    let bgX = 40 + 20 * X;
-    let bgY = 40 + 20 * Y;
+        let rX = -(X - 0.5) * 26;
+        let rY = (Y - 0.5) * 26;
 
-    document.documentElement.style.setProperty("--xPhp", 100 * X + "%");
-    document.documentElement.style.setProperty("--yPhp", 100 * Y + "%");
+        let bgX = 40 + 20 * X;
+        let bgY = 40 + 20 * Y;
 
-    document.documentElement.style.setProperty("--bgPhp-x", bgX + "%");
-    document.documentElement.style.setProperty("--bgPhp-y", bgY + "%");
+        document.documentElement.style.setProperty("--xPhp", 100 * X + "%");
+        document.documentElement.style.setProperty("--yPhp", 100 * Y + "%");
 
-    document.documentElement.style.setProperty("--rPhp-x", rX + "deg");
-    document.documentElement.style.setProperty("--rPhp-y", rY + "deg");
-});
+        document.documentElement.style.setProperty("--bgPhp-x", bgX + "%");
+        document.documentElement.style.setProperty("--bgPhp-y", bgY + "%");
+
+        document.documentElement.style.setProperty("--rPhp-x", rX + "deg");
+        document.documentElement.style.setProperty("--rPhp-y", rY + "deg");
+    });
 
 
 
 
 const elShib = document.querySelector(".cardShib");
-const wrapShib = document.querySelector(".cardShib__wrapper");
-let wShib = elShib.clientWidth;
-let hShib = elShib.clientHeight;
-let bShib = elShib.getBoundingClientRect();
+
 elShib.addEventListener("mousemove", (e) => {
+    let wShib = elShib.clientWidth;
+    let hShib = elShib.clientHeight;
+    let bShib = elShib.getBoundingClientRect();
+
     let X = (e.clientX - bShib.width) / wShib;
     let Y = (e.clientY - bShib.height) / hShib;
 
@@ -174,6 +190,7 @@ searchButton.addEventListener('click',()=>{
         .catch(error=> {
             console.log(error);
         });
+
 
 });
 

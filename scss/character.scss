@@ -12,16 +12,8 @@
     footer {
         width: 100%;
 
-
-
-    div {
-        
-        border: 3px solid grey;
-        align-items: center;
-        
-
-
     }
+
     .mainDiv {
         text-align: center;
         align-items: center;
@@ -35,6 +27,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        .divButton {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: 0.25s;
+        }
         
         .nameBlock {
             font-family: 'Roboto', sans-serif;
